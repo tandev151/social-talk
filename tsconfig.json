@@ -18,7 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      // Declare assets path
+      "@assets": ["./src/assets"],
+      "@assets/*": ["./src/assets/*"],
+
+      // Declare components path
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"]
+    }
   },
   "include": ["src", "src/custom.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
