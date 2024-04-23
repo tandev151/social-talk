@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.scss';
 
 interface Props {
   // Property
@@ -23,9 +24,11 @@ const Button: React.FC<Props> = ({
     _className += ' ' + className;
   }
 
+  //   TODO: custom
+
   return (
     <button className={_className} style={style} onClick={onClick}>
-      {children || <span className='btn-label'>{label}</span>}
+      {children || <span className='button-label'>{label}</span>}
     </button>
   );
 };

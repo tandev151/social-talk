@@ -1,0 +1,12 @@
+.button-container {
+  padding: 10px 20px;
+
+  .button-label {
+    font-size: 14px;
+    color: aquamarine;
+  }
+
+  &.none-outline-btn {
+    border: none;
+  }
+}
