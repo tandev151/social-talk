@@ -1,6 +1,5 @@
-import { useState } from 'react';
-
-import '@assets/style/index.scss';
+import '@/App.css';
+import { Button } from '@components';
 
 function App() {
   return (
@@ -8,6 +7,7 @@ function App() {
       <input type='text' className='username' />
       <input type='text' className='password' />
       <span className='error'>CapsLock is opening</span>
+      <Button />
     </div>
   );
 }
