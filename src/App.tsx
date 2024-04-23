@@ -7,7 +7,15 @@ function App() {
       <input type='text' className='username' />
       <input type='text' className='password' />
       <span className='error'>CapsLock is opening</span>
-      <Button />
+      <Button
+        className='submit-btn'
+        label='Submit'
+        style={{
+          padding: 10
+        }}
+        onClick={() => {
+          console.log('Clicked ');
+        }}></Button>
     </div>
   );
 }
