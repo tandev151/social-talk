@@ -8,7 +8,7 @@ function App() {
       <input type='text' className='password' />
       <span className='error'>CapsLock is opening</span>
       <Button
-        className='submit-btn'
+        className='submit-btn none-outline-btn'
         label='Submit'
         style={{
           padding: 10

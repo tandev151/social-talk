@@ -1,12 +1,19 @@
 .button-container {
   padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid #372d2d;
 
   .button-label {
     font-size: 14px;
-    color: aquamarine;
+    color: rgba(29, 31, 30, 0.775);
   }
 
   &.none-outline-btn {
     border: none;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
   }
 }
