@@ -17,15 +17,18 @@
 
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+
+    &:not(:disabled) {
+      opacity: 0.8;
+    }
   }
 
   &:disabled {
     cursor: default;
-    opacity: 0.5;
+    background-color: $gray-0;
 
     .button-label {
-      color: $gray-1;
+      color: $gray-3;
     }
   }
 }

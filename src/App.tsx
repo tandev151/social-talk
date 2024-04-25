@@ -10,9 +10,7 @@ function App() {
       <Button
         className='submit-btn none-outline-btn'
         label='Submit'
-        style={{
-          padding: 10
-        }}
+        disabled
         onClick={() => {
           console.log('Clicked ');
         }}></Button>
