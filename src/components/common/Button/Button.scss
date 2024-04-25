@@ -1,11 +1,14 @@
+@import '@assets/style/variables/index.scss';
+
 .button-container {
   padding: 10px 20px;
   border-radius: 3px;
-  border: 1px solid #372d2d;
+  background-color: $purple-3;
+  border: 1px solid $purple-4;
 
   .button-label {
     font-size: 14px;
-    color: rgba(29, 31, 30, 0.775);
+    color: #fff;
   }
 
   &.none-outline-btn {
@@ -20,5 +23,9 @@
   &:disabled {
     cursor: default;
     opacity: 0.5;
+
+    .button-label {
+      color: $gray-1;
+    }
   }
 }
