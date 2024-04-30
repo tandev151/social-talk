@@ -1,3 +1,18 @@
+@use 'sass:map';
+
+$themes: (
+  light: (
+    colorHeaderFooter: $white,
+    colorText: $gray-4,
+    colorBackground: $white
+  ),
+  // dark: (
+  //   colorHeaderFooter: $gray-3,
+  //   colorText: $white,
+  //   colorBackground: $black
+  // )
+);
+
 @mixin themify($themes) {
   @each $theme, $map in $themes {
     .theme-#{$theme} & {
@@ -5,8 +20,8 @@
       $theme-map: () !global;
 
       @each $key, $submap in $map {
-        $value: map.get(map.get($themes, $theme), '#{$key}');
-        $theme-map: map.merge(
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
           $theme-map,
           (
             $key: $value
@@ -18,8 +33,9 @@
     }
   }
 }
+
 @function themed($key) {
-  @return map.get($theme-map, $key);
+  @return map-get($theme-map, $key);
 }
 
 // .theme-light {

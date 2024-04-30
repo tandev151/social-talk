@@ -30,7 +30,10 @@
 
       // Declare constants path
       // "@constants": ["./src/constants"],
-      "@constants/*": ["./src/constants/*"]
+      "@constants/*": ["./src/constants/*"],
+
+      // Declare contexts path
+      "@contexts/*": ["./src/contexts/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],

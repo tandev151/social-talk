@@ -1,7 +1,14 @@
 @import './variables/index.scss';
 @import './mixins/index.scss';
 
-.username {
-  font-size: 40px;
-  color: $purple-1;
+@include themify($themes) {
+  .page-header {
+    background-color: themed('colorBackground');
+  }
+
+  .page-body {
+  }
+}
+.global-container {
+  // background: #fff;
 }
