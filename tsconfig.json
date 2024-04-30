@@ -26,7 +26,11 @@
 
       // Declare components path
       "@components": ["./src/components"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+
+      // Declare constants path
+      // "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],

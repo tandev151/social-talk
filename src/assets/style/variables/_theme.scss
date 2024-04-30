@@ -1,0 +1,15 @@
+// theme-variables.scss
+@import './colors';
+
+$themes: (
+  light: (
+    colorHeaderFooter: $white,
+    colorText: $gray-4,
+    colorBackground: $white
+  ),
+  dark: (
+    colorHeaderFooter: $gray-3,
+    colorText: $white,
+    colorBackground: $black
+  )
+);

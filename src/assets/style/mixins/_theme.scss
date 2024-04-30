@@ -1,0 +1,44 @@
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      //light/ dark
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map.get(map.get($themes, $theme), '#{$key}');
+        $theme-map: map.merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+@function themed($key) {
+  @return map.get($theme-map, $key);
+}
+
+// .theme-light {
+//   background-color: aliceblue;
+//   // each
+
+//   // key:colorHeaderFooter
+//   // submap: white
+
+//   // $value: $white;
+//   // $theme-map : ( (), ($key:$white )
+
+//   // key:colorText
+//   // submap: gray-4
+
+//   // key:colorBackground
+//   // submap: white
+// }
+
+// .theme-dark {
+//   background-color: $black;
+// }
