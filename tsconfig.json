@@ -33,7 +33,11 @@
       "@constants/*": ["./src/constants/*"],
 
       // Declare contexts path
-      "@contexts/*": ["./src/contexts/*"]
+      "@contexts/*": ["./src/contexts/*"],
+
+      //Declare containers path
+      "@containers": ["./src/containers"],
+      "@containers/*": ["./src/containers/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],
