@@ -1,18 +1,27 @@
+// Set up themes
 // theme-variables.scss
-@import './colors';
-
 $themes: (
   light: (
     colorHeaderFooter: $white,
     colorText: $gray-4,
-    colorBackground: $white
+    colorBackground: $white,
+
+    // Button
+    colorBtn: $purple-3,
+    colorBtnLabel: $white
   ),
   dark: (
     colorHeaderFooter: $gray-3,
     colorText: $white,
-    colorBackground: $black
+    colorBackground: $black,
+
+    // Button
+    colorBtn: $white,
+    colorBtnLabel: $black
   )
 );
+
+$theme-map: null;
 
 @mixin themify($themes) {
   @each $theme, $map in $themes {
@@ -34,4 +43,34 @@ $themes: (
 }
 @function themed($key) {
   @return map-get($theme-map, $key);
+}
+
+// Apply for container
+
+@include themify($themes) {
+  &.global-container {
+    background-color: themed('colorBackground');
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    a,
+    label,
+    span {
+      color: themed('colorText');
+    }
+
+    button {
+      background-color: themed('colorBtn');
+
+      .button-label {
+        color: themed('colorBtnLabel');
+      }
+    }
+  }
+
+  .page-body {
+  }
 }
