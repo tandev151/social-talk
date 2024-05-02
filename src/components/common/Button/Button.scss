@@ -3,13 +3,12 @@
 .button-container {
   padding: 10px 20px;
   border-radius: 3px;
-  background-color: $purple-3;
+
   border: 1px solid $purple-4;
 
   .button-label {
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
   }
 
   &.none-outline-btn {
