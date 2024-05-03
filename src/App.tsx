@@ -1,5 +1,10 @@
 import { Component, useState } from 'react';
-import { RouterProvider } from 'react-router-dom';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route
+} from 'react-router-dom';
 
 // Context
 import { ThemeContext } from './contexts/theme-context';
@@ -12,7 +17,7 @@ import { routes } from '@constants/routes';
 import { Button, Header } from '@components';
 
 // Containers
-import { NotFound } from '@containers';
+import { HomePage, LoginPage, NotFound } from '@containers';
 // Style
 import '@/App.css';
 
@@ -26,14 +31,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <RouterProvider
-        router={routes}
-        fallbackElement={
-          <>
-            <div className='sdad'>dsad</div>
-          </>
-        }
-      />
+      <RouterProvider router={routes} />
     </ThemeContext.Provider>
   );
 }

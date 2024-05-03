@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useRouteError } from 'react-router-dom';
 
-export default class NotFound extends Component {
-  render() {
-    return <div>NotFound</div>;
-  }
+export default function NotFound() {
+  const error = useRouteError();
+
+  console.log({ error });
+  return <div>NotFound</div>;
 }
