@@ -37,7 +37,10 @@
 
       //Declare containers path
       "@containers": ["./src/containers"],
-      "@containers/*": ["./src/containers/*"]
+      "@containers/*": ["./src/containers/*"],
+
+      //Declare utils path
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],
