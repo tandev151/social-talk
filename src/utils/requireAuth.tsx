@@ -1,8 +1,8 @@
-import React from 'react';
 import { ErrorPage } from '@containers';
 
 export function requireAuth(Component: any) {
-  if (true) {
+  const test = true;
+  if (test) {
     return <ErrorPage />;
   }
 

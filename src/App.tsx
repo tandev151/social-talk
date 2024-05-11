@@ -1,10 +1,5 @@
-import { Component, useState } from 'react';
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route
-} from 'react-router-dom';
+import { useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
 
 // Context
 import { ThemeContext } from './contexts/theme-context';
@@ -13,11 +8,6 @@ import { ThemeContext } from './contexts/theme-context';
 import { DART_THEME, LIGHT_THEME } from '@constants/common';
 import { routes } from '@constants/routes';
 
-// Component
-import { Button, Header } from '@components';
-
-// Containers
-import { HomePage, LoginPage, NotFound } from '@containers';
 // Style
 import '@/App.css';
 
