@@ -1,20 +1,38 @@
+import { Component, useState } from 'react';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route
+} from 'react-router-dom';
+
+// Context
+import { ThemeContext } from './contexts/theme-context';
+
+// Constants
+import { DART_THEME, LIGHT_THEME } from '@constants/common';
+import { routes } from '@constants/routes';
+
+// Component
+import { Button, Header } from '@components';
+
+// Containers
+import { HomePage, LoginPage, NotFound } from '@containers';
+// Style
 import '@/App.css';
-import { Button } from '@components';
 
 function App() {
+  const isBrowserDefaultDark = () =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const [theme, setTheme] = useState(
+    isBrowserDefaultDark() ? DART_THEME : LIGHT_THEME
+  );
+
   return (
-    <div className='login'>
-      <input type='text' className='username' />
-      <input type='text' className='password' />
-      <span className='error'>CapsLock is opening</span>
-      <Button
-        className='submit-btn none-outline-btn'
-        label='Submit'
-        disabled
-        onClick={() => {
-          console.log('Clicked ');
-        }}></Button>
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <RouterProvider router={routes} />
+    </ThemeContext.Provider>
   );
 }
 

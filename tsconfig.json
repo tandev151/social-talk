@@ -26,7 +26,21 @@
 
       // Declare components path
       "@components": ["./src/components"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+
+      // Declare constants path
+      // "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"],
+
+      // Declare contexts path
+      "@contexts/*": ["./src/contexts/*"],
+
+      //Declare containers path
+      "@containers": ["./src/containers"],
+      "@containers/*": ["./src/containers/*"],
+
+      //Declare utils path
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],
