@@ -1,3 +1,21 @@
+#Development
+
+# FROM node:20.9-alpine
+
+# WORKDIR /app
+
+# COPY package.json .
+
+# RUN yarn 
+
+# COPY . .
+
+# EXPOSE 3000
+
+# CMD [ "yarn", "dev" ]
+
+#Production
+
 FROM node:20.9-alpine
 
 WORKDIR /app
@@ -8,6 +26,9 @@ RUN yarn
 
 COPY . .
 
-EXPOSE 5173
+RUN yarn build
 
-CMD [ "yarn", "build" ]
+EXPOSE 3000
+
+CMD [ "yarn", "preview" ]
+
