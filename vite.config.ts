@@ -5,6 +5,7 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react(), basicSsl()],
   resolve: {
     alias: {
@@ -18,7 +19,13 @@ export default defineConfig({
     }
   },
   server: {
+    watch: {
+      usePolling: true
+    },
+
+    strictPort: true,
     host: '127.0.0.1',
-    port: 3000
+    port: 3000,
+    origin: 'https://127.0.0.1:3000'
   }
 });
