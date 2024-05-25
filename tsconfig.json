@@ -44,7 +44,9 @@
 
       //Declare reducers path
       "@reducers": ["./src/reducers"],
-      "@reducers/*": ["./src/reducers/*"]
+      "@reducers/*": ["./src/reducers/*"],
+
+      "@store": ["./src/store"]
     }
   },
   "include": ["src", "src/custom.d.ts"],

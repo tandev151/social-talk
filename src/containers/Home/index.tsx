@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { testF } from '@reducers/testSlice';
 import { Button } from '@components';
-import { RootState } from '../../store';
+import { RootState } from '@store';
 
 function HomePage() {
   const dispatch = useDispatch();
