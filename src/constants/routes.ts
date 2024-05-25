@@ -10,7 +10,7 @@ import { requireAuth } from '@utils/requireAuth';
 export const routes = createBrowserRouter([
   {
     path: '/',
-    Component: () => requireAuth(HomePage)
+    Component: HomePage
   },
   {
     path: '/login',

@@ -40,7 +40,11 @@
       "@containers/*": ["./src/containers/*"],
 
       //Declare utils path
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+
+      //Declare reducers path
+      "@reducers": ["./src/reducers"],
+      "@reducers/*": ["./src/reducers/*"]
     }
   },
   "include": ["src", "src/custom.d.ts"],
