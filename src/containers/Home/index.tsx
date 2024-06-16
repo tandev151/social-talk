@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { testF } from '@reducers/testSlice';
 import { Button } from '@components';
 import { RootState } from '@store';
+import { Dropdown as Drrropdown } from '@components/common/Dropdown/Dropdown';
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -9,8 +10,9 @@ function HomePage() {
 
   return (
     <div>
+      <Drrropdown label='Danh sách test' onToggle={() => {}} />
       <Button
-        label='click'
+        label='Click'
         onClick={() => {
           console.log({ number });
           dispatch(testF(number?.number + 2));
