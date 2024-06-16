@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { testF } from '@reducers/testSlice';
-import { Button } from '@components';
+import { SlidingCard } from '@components';
 import { RootState } from '@store';
 
 function HomePage() {
@@ -9,12 +9,7 @@ function HomePage() {
 
   return (
     <div>
-      <Button
-        label='click'
-        onClick={() => {
-          console.log({ number });
-          dispatch(testF(number?.number + 2));
-        }}></Button>
+      <SlidingCard />
     </div>
   );
 }
