@@ -9,6 +9,10 @@ function HomePage() {
 
   return (
     <div>
+      <div className='test'>Test</div>
+      <SlidingCard />
+      <SlidingCard />
+      <SlidingCard />
       <SlidingCard />
     </div>
   );

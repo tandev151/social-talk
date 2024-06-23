@@ -46,7 +46,9 @@
       "@reducers": ["./src/reducers"],
       "@reducers/*": ["./src/reducers/*"],
 
-      "@store": ["./src/store"]
+      "@store": ["./src/store"],
+
+      "@fonts": ["./src/fonts"]
     }
   },
   "include": ["src", "src/custom.d.ts"],

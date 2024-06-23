@@ -1,0 +1,122 @@
+@import '@assets/style/index.scss';
+
+.sliding-card {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  box-shadow: 1px 1px 10px 1px #ccc;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    width: 500px;
+
+    .image-container {
+      &::after {
+        position: absolute;
+
+        content: '';
+        top: 50%;
+        left: 100%;
+
+        border-left: 10px solid #fff;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+
+        transform: translateY(-50%);
+
+        transition: 0.1s ease-in-out;
+      }
+
+      img {
+        transform: rotate(20deg);
+      }
+    }
+    .body {
+      opacity: 1;
+
+      div {
+        opacity: 1;
+      }
+    }
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    width: 250px;
+    height: 400px;
+    position: relative;
+    img {
+      object-fit: contain;
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      transition: ease-in-out 0.5s;
+    }
+  }
+
+  .body {
+    flex: 1;
+    background-color: #5ec7f8;
+    padding: 16px 8px;
+    width: 50%;
+    height: 400px;
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+
+    div {
+      color: #fff;
+      font-family: 'Rubik';
+      transition: 0.3s ease-in-out;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .sub-title {
+      margin-top: 24px;
+      font-weight: 600;
+    }
+
+    .quote {
+      margin-top: 8px;
+    }
+
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+      column-gap: 12px;
+      width: 100%;
+
+      .size-item {
+        width: 40px;
+        height: 40px;
+        border: 1px #fff solid;
+
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background-color: #fff;
+          color: #5ec7f8;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .footer {
+      opacity: 0;
+      .summary {
+      }
+
+      div {
+        opacity: 0;
+      }
+    }
+  }
+}

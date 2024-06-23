@@ -11,6 +11,10 @@ import { routes } from '@constants/routes';
 // Style
 import '@/App.css';
 
+// Fonts
+// import './fonts/RubikTest.ttf';
+// import '@fontsource/rubik';
+
 function App() {
   const env = import.meta.env;
   console.log({ env });
