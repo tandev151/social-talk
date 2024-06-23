@@ -1,3 +1,4 @@
+import Icon from '@components/common/Icon';
 import React from 'react';
 
 export default function Navbar() {
@@ -9,6 +10,12 @@ export default function Navbar() {
           alt=''
           className='logo'
         />
+        <div className='search'>
+          <input className='search-input' />
+          <span className='search-btn'>
+            <Icon name='search-white' />
+          </span>
+        </div>
       </div>
     </div>
   );

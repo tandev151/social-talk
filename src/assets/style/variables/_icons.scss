@@ -1,10 +1,11 @@
-$icons-path: '../../media/icons';
+$icons-path: 'src/assets/media/icons';
 
 @mixin icon($iconName, $size: 16px) {
   width: $size;
   height: $size;
-  background: url('#{$icons-path}/#{$name}.svg') no-repeat center center;
+  background: url('#{$icons-path}/#{$iconName}.svg') no-repeat center center;
   background-size: contain;
+  display: inline-block;
 }
 
 .search-white {
