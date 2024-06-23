@@ -6,6 +6,9 @@ import { ThemeContext } from '@contexts/theme-context';
 // Constants
 import { LIGHT_THEME, DART_THEME } from '@constants/common';
 
+// Sub-components
+import Navbar from './Navbar';
+
 interface Props {}
 
 export const Header: React.FC<Props> = () => {
@@ -13,6 +16,7 @@ export const Header: React.FC<Props> = () => {
 
   return (
     <div className='page-header'>
+      <Navbar />
       <Button
         className='submit-btn none-outline-btn'
         label={theme}
