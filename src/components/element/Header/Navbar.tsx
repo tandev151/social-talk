@@ -17,6 +17,14 @@ export default function Navbar() {
           </span>
         </div>
       </div>
+
+      <div className='nav-part'>
+        <div className='nav-item'>HOME</div>
+        <div className='nav-item'>ABOUT</div>
+        <div className='nav-item'>PAGES</div>
+        <div className='nav-item'>CONTACT</div>
+        <div className='nav-item start'>GET STARTED</div>
+      </div>
     </div>
   );
 }
