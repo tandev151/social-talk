@@ -12,8 +12,6 @@ import { routes } from '@constants/routes';
 import '@/App.css';
 
 function App() {
-  const env = import.meta.env;
-  console.log({ env });
   const isBrowserDefaultDark = () =>
     window.matchMedia('(prefers-color-scheme: dark)').matches;
 

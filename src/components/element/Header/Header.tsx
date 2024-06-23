@@ -10,7 +10,7 @@ interface Props {}
 
 export const Header: React.FC<Props> = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-
+  console.log({ theme });
   return (
     <div className='page-header'>
       <Button
