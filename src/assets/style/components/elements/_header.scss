@@ -2,7 +2,7 @@
   background-image: url('src/assets/media/images/templatemo-wave-header.jpg');
   .navbar {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
     flex-wrap: wrap;
     height: 150px;
@@ -10,6 +10,7 @@
     .nav-part {
       display: flex;
 
+      align-items: center;
       padding: 0 40px;
 
       .logo {
@@ -17,12 +18,26 @@
         max-height: 100px;
       }
 
+      .search {
+        display: flex;
+        align-items: center;
+
+        .search-btn {
+          display: flex;
+          align-items: center;
+          width: 60px;
+        }
+      }
+
       .nav-item {
         padding: 12px 20px;
         cursor: pointer;
+        color: $white;
+        font-weight: 800;
 
         &.start {
           border: 1px solid $white;
+          border-radius: 20px;
         }
       }
     }
