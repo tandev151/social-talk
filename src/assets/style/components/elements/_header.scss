@@ -21,11 +21,14 @@
       .search {
         display: flex;
         align-items: center;
+        background-color: $light-blue-600;
+        border-radius: 0 20px 20px;
+        cursor: pointer;
 
         .search-btn {
           display: flex;
           align-items: center;
-          width: 60px;
+          width: 50px;
         }
       }
 
@@ -38,6 +41,11 @@
         &.start {
           border: 1px solid $white;
           border-radius: 20px;
+        }
+
+        &:hover {
+          color: $light-blue-900;
+          transition: all 0.5s;
         }
       }
     }

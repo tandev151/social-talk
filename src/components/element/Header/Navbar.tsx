@@ -1,9 +1,10 @@
 import Icon from '@components/common/Icon';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Input } from '@components';
 
 export default function Navbar() {
+  const [searchKeyword, setSearchKeyword] = useState('');
   return (
     <div className='navbar'>
       <div className='nav-part'>
@@ -13,7 +14,11 @@ export default function Navbar() {
           className='logo'
         />
         <div className='search'>
-          <Input placeholder='Nhap tu khoa' value='' onChange={() => {}} />
+          <Input
+            placeholder='Nhap tu khoa'
+            value={searchKeyword}
+            onChange={(e) => setSearchKeyword(e.target.value)}
+          />
 
           <Icon name='search-white' className='search-btn' />
         </div>
